@@ -1,6 +1,6 @@
 
 
-## Getting Started
+## Development 
 
 First, run the development server:
 
@@ -11,3 +11,5 @@ npm run dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 
+## Deployment
+[https://dashboard-three-sepia.vercel.app/](https://dashboard-three-sepia.vercel.app/)
