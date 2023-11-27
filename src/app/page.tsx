@@ -22,7 +22,7 @@ import { Overview } from "@/components/overview";
 export default function Home() {
   return (
     <>
-      <div className="hidden md:block">
+      
         <div className="border-t">
           <div className="bg-background">
             <div className="grid lg:grid-cols-5">
@@ -372,7 +372,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
+      
     </>
   );
 }
