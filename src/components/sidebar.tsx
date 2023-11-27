@@ -1,11 +1,34 @@
-import { Button } from "./button";
+import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
+import { ModeToggle } from '@/components/mode-toggle'
+import { UserNav } from "@/components/usernav"
 
-export function SideBar() {
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible"
+
+import{ Search } from "@/components/searchbar"
+
+interface SidebarProps extends React.HTMLAttributes<HTMLDivElement> {
+  
+}
+export function SideBar({className}:SidebarProps) {
   return (
+    <div className={cn("pb-12", className)}>
     <div className="space-y-4 py-4">
-      <div className="px-3 py-2">
+    <div className="px-5 py-5">
 
+    <UserNav />
+
+    
+    </div>
+    <div className="px-3 py-2"><Search /></div>
+    
+    
+      <div className="px-3 py-2">
+      
         <div className="space-y-1">
           <Button variant="secondary" className="w-full justify-start">
             <svg
@@ -62,11 +85,56 @@ export function SideBar() {
             </svg>
             Contacts
           </Button>
-        </div>
+          
+          </div>
+          <div className="space-y-20 py-20">
+          <div className="space-y-1">
+          <Button variant="ghost" className="w-full justify-start  ">
+            
+            Tags            
+            
+          </Button>
+
+          <Button variant="ghost" className="w-full justify-start  ">
+          <svg height="20" width="20">
+            <circle cx="10" cy="10" r="5"  fill="red" />
+          </svg>
+            Developer            
+            
+          </Button>
+          <Button variant="ghost" className="w-full justify-start  ">
+          <svg height="20" width="20">
+            <circle cx="10" cy="10" r="5"  fill="blue" />
+          </svg>
+            Designer            
+            
+          </Button>
+
+          <Button variant="ghost" className="w-full justify-start  ">
+          <svg height="20" width="20">
+            <circle cx="10" cy="10" r="5"  fill="green" />
+          </svg>
+            Partner            
+            
+          </Button>
+          <Button variant="ghost" className="w-full justify-start  ">
+          <svg height="20" width="20">
+            <circle cx="10" cy="10" r="5"  fill="#ADD8E6" />
+          </svg>
+            Prospect      
+            
+          </Button>
+          
+          
+          </div>
+          </div>
+
         
       
       
         </div>
+       
+    </div>
     </div>
   );
 }
